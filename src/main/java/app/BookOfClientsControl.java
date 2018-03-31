@@ -6,9 +6,9 @@ import utils.DataReader;
 
 public class BookOfClientsControl {
 
-	public final int exit = 0;
-	public final int addClient = 1;
-	public final int printClients = 2;
+	public final static int EXIT = 0;
+	public final static int ADD_CLIENT = 1;
+	public final static int PRINT_CLIENTS = 2;
 
 	private DataReader dataReader;
 	private BookOfClients bookOfClients;
@@ -21,12 +21,12 @@ public class BookOfClientsControl {
 	public void controlLoop() {
 		int option;
 		printOptions();
-		while ((option = dataReader.getInt()) != exit) {
+		while ((option = dataReader.getInt()) != EXIT) {
 			switch (option) {
-			case addClient:
+			case ADD_CLIENT:
 				addClient();
 				break;
-			case printClients:
+			case PRINT_CLIENTS:
 				printClients();
 				break;
 			default:

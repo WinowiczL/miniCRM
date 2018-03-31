@@ -2,12 +2,12 @@ package data;
 
 public class BookOfClients {
 
-	public final int maxClients = 2000;
+	public final static int MAX_CLIENTS = 2000;
 	private Client[] clients;
 	private int clientNumber;
 
 	public BookOfClients() {
-		clients = new Client[maxClients];
+		clients = new Client[MAX_CLIENTS];
 	}
 
 	public Client[] getClients() {
@@ -19,7 +19,7 @@ public class BookOfClients {
 	}
 
 	public void addClient(Client client) {
-		if (clientNumber < maxClients) {
+		if (clientNumber < MAX_CLIENTS) {
 			clients[clientNumber] = client;
 			clientNumber++;
 		} else {
