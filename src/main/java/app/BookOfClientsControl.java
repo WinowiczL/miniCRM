@@ -6,10 +6,6 @@ import utils.DataReader;
 
 public class BookOfClientsControl {
 
-	public final static int EXIT = 0;
-	public final static int ADD_CLIENT = 1;
-	public final static int PRINT_CLIENTS = 2;
-
 	private DataReader dataReader;
 	private BookOfClients bookOfClients;
 
@@ -19,9 +15,9 @@ public class BookOfClientsControl {
 	}
 
 	public void controlLoop() {
-		int option;
+		Option option;
 		printOptions();
-		while ((option = dataReader.getInt()) != EXIT) {
+		while ((option = Option.createFromInt(dataReader.getInt())) != Option.EXIT) {
 			switch (option) {
 			case ADD_CLIENT:
 				addClient();
@@ -39,9 +35,9 @@ public class BookOfClientsControl {
 
 	private void printOptions() {
 		System.out.println("Choose option: ");
-		System.out.println("0 - Exit");
-		System.out.println("1 - Add Client");
-		System.out.println("2 - Show Clients");
+		for (Option o: Option.values()) {
+			System.out.println(o);
+		}
 	}
 
 	public void addClient() {

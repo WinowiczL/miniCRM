@@ -32,7 +32,7 @@ public class BookOfClients {
 			System.out.println("Your Book of Clients is empty");
 		}
 		for (int i = 0; i < clientNumber; i++) {
-			clients[i].printInfo();
+			System.out.println(clients[i]);
 		}
 	}
 }
