@@ -61,7 +61,7 @@ public class Client {
 
 	public void printInfo () {
 		System.out.println("Imię klienta: " + firstName + "\nNazwisko klienta: " + lastName + "\nOpis: " + description 
-				+ "\nData sesji: " + dateOfSession + "\nTyp sesji: " + typeOfSession + "\nCena sesji: " + priceOfSession);
+				+ "\nData sesji: " + dateOfSession + "\nTyp sesji: " + typeOfSession + "\nCena sesji: " + priceOfSession + "\n");
 	}
 	
 }

@@ -6,16 +6,22 @@ import data.Client;
 public class DataReader {
 
 	private Scanner sc;
-	
+
 	public DataReader() {
 		sc = new Scanner(System.in);
 	}
-	
+
 	public void close() {
 		sc.close();
 	}
-	
-	public Client readAndCreateClient () {
+
+	public int getInt() {
+		int number = sc.nextInt();
+		sc.nextLine();
+		return number;
+	}
+
+	public Client readAndCreateClient() {
 		System.out.println("Name of Client:");
 		String name = sc.nextLine();
 		System.out.println("Last name of Client:");
@@ -29,7 +35,7 @@ public class DataReader {
 		System.out.println("Price of Session:");
 		int priceOfSession = sc.nextInt();
 		sc.nextLine();
-		
+
 		return new Client(name, lastName, description, dateOfSession, typeOfSession, priceOfSession);
 	}
 }
