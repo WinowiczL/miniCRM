@@ -1,4 +1,4 @@
-package miniCRM;
+package data;
 
 public class Client {
 
@@ -17,6 +17,11 @@ public class Client {
 		this.typeOfSession = typeOfSession;
 		this.priceOfSession = priceOfSession;
 	}
+	
+	public Client(Client client) {
+		this(client.firstName,client.lastName, client.description, client.dateOfSession, client.typeOfSession, client.priceOfSession);
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
