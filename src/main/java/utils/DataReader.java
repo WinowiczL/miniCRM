@@ -1,6 +1,8 @@
 package utils;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import data.Client;
 
 public class DataReader {
@@ -15,9 +17,15 @@ public class DataReader {
 		sc.close();
 	}
 
-	public int getInt() {
-		int number = sc.nextInt();
-		sc.nextLine();
+	public int getInt() throws InputMismatchException {
+		int number = 0;
+		try {
+			number = sc.nextInt();
+		} catch (InputMismatchException e) {
+			throw new NumberFormatException("To nie jest liczba");
+		} finally {
+			sc.nextLine();
+		}
 		return number;
 	}
 

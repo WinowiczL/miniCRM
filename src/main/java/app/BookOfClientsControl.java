@@ -1,6 +1,7 @@
 package app;
 
 import data.BookOfClients;
+import utils.BookOfClientsUtils;
 import data.Client;
 import utils.DataReader;
 
@@ -46,7 +47,6 @@ public class BookOfClientsControl {
 	}
 
 	public void printClients() {
-		bookOfClients.printClients();
-		System.out.println();
+		BookOfClientsUtils.printClients(bookOfClients);
 	}
 }

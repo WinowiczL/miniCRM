@@ -2,7 +2,7 @@ package data;
 
 public class BookOfClients {
 
-	public final static int MAX_CLIENTS = 2000;
+	public final static int MAX_CLIENTS = 100;
 	private Client[] clients;
 	private int clientNumber;
 
@@ -18,21 +18,20 @@ public class BookOfClients {
 		return clientNumber;
 	}
 
-	public void addClient(Client client) {
-		if (clientNumber < MAX_CLIENTS) {
-			clients[clientNumber] = client;
-			clientNumber++;
-		} else {
-			System.out.println("To many Clients in your Book");
+	public void addClient(Client client) throws ArrayIndexOutOfBoundsException {
+		if (clientNumber == MAX_CLIENTS) {
+			throw new ArrayIndexOutOfBoundsException("MAX_CLIENTS: " + MAX_CLIENTS);
 		}
+		clients[clientNumber] = client;
+		clientNumber++;
 	}
 
-	public void printClients() {
-		if (clients[0] == null) {
-			System.out.println("Your Book of Clients is empty");
-		}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
 		for (int i = 0; i < clientNumber; i++) {
-			System.out.println(clients[i]);
+			builder.append(clients[i] + "\n");
 		}
+		return builder.toString();
 	}
 }
