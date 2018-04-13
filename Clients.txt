@@ -1,0 +1,14 @@
+Name of Client: asd
+Surname of Client: asd
+Description: asd
+Date of Session: asd
+Type of Session: 123123
+Price of Session: 123
+
+Name of Client: asd
+Surname of Client: zxc
+Description: zxc
+Date of Session: zxc
+Type of Session: zc
+Price of Session: 44
+

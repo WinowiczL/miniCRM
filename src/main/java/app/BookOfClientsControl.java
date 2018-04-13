@@ -2,7 +2,6 @@ package app;
 
 import data.BookOfClients;
 import data.Client;
-import utils.BookOfClientsUtils;
 import utils.DataReader;
 import utils.IO;
 
@@ -15,7 +14,6 @@ public class BookOfClientsControl {
 	public BookOfClientsControl() {
 		dataReader = new DataReader();
 		bookOfClients = new BookOfClients();
-
 	}
 
 	public void controlLoop() {
@@ -30,7 +28,7 @@ public class BookOfClientsControl {
 				printClients();
 				break;
 			case SAVE_TO_FILE:
-				io.writeFile(bookOfClients.getClients());
+				io.writeFile(bookOfClients.listOfClients);
 				break;
 			case PRINT_ALL_CLIENTS:
 				io.readFile();
@@ -56,6 +54,8 @@ public class BookOfClientsControl {
 	}
 
 	public void printClients() {
-		BookOfClientsUtils.printClients(bookOfClients);
+		for (Client client : bookOfClients.listOfClients) {
+			System.out.println(client.toString());
+		}
 	}
 }

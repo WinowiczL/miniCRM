@@ -1,8 +1,15 @@
 package utils;
 
-import data.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
 
-import java.io.*;
+import data.BookOfClients;
+import data.Client;
 
 public class IO {
 
@@ -26,14 +33,14 @@ public class IO {
 			System.out.println("File " + fileName + " created");
 	}
 
-	public void writeFile(Client[] clients) {
+	public void writeFile(List<Client> clients) {
 		try (FileWriter fileWriter = new FileWriter(fileName, true);
 				BufferedWriter writer = new BufferedWriter(fileWriter);
 
-		) {
-			for (Client client : clients) {
-				writer.write(client.toString());
+		) { for(Client client : clients) {
+				writer.write(client.toString() + "\n");
 			}
+			
 
 		} catch (IOException e1) {
 			e1.printStackTrace();
