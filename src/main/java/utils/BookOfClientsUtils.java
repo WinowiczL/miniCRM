@@ -10,7 +10,7 @@ public class BookOfClientsUtils {
 		int clientNumber = book.getClientNumber();
 		int countClients = 0;
 		for (int i = 0; i < clientNumber; i++) {
-			System.out.println(clients[i]);
+			System.out.println(clients[i] + "\n");
 			countClients++;
 		}
 		if (countClients == 0) {

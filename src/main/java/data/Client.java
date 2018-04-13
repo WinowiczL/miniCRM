@@ -8,8 +8,9 @@ public class Client {
 	private String dateOfSession;
 	private String typeOfSession;
 	private int priceOfSession;
-	
-	public Client (String firstName, String lastName, String description, String dateOfSession, String typeOfSession, int priceOfSession) {
+
+	public Client(String firstName, String lastName, String description, String dateOfSession, String typeOfSession,
+			int priceOfSession) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.description = description;
@@ -17,48 +18,60 @@ public class Client {
 		this.typeOfSession = typeOfSession;
 		this.priceOfSession = priceOfSession;
 	}
-	
+
 	public Client(Client client) {
-		this(client.firstName,client.lastName, client.description, client.dateOfSession, client.typeOfSession, client.priceOfSession);
+		this(client.firstName, client.lastName, client.description, client.dateOfSession, client.typeOfSession,
+				client.priceOfSession);
 	}
-	
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getSecondName() {
 		return lastName;
 	}
+
 	public void setSecondName(String secondName) {
 		this.lastName = secondName;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	public String getDateOfSession() {
 		return dateOfSession;
 	}
+
 	public void setDateOfSession(String dateOfSession) {
 		this.dateOfSession = dateOfSession;
 	}
+
 	public String getTypeOfSession() {
 		return typeOfSession;
 	}
+
 	public void setTypeOfSession(String typeOfSession) {
 		this.typeOfSession = typeOfSession;
 	}
+
 	public int getPriceOfSession() {
 		return priceOfSession;
 	}
+
 	public void setPriceOfSession(int priceOfSession) {
 		this.priceOfSession = priceOfSession;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -114,6 +127,7 @@ public class Client {
 	@Override
 	public String toString() {
 		return ("Name of Client: " + firstName + "\nSurname of Client: " + lastName + "\nDescription: " + description
-				+ "\nDate of Session: " + dateOfSession + "\nType of Session: " + typeOfSession + "\nPrice of Session: " + priceOfSession);
-	}	
+				+ "\nDate of Session: " + dateOfSession + "\nType of Session: " + typeOfSession + "\nPrice of Session: "
+				+ priceOfSession + "\n");
+	}
 }

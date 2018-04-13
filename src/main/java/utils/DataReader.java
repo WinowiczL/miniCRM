@@ -22,7 +22,7 @@ public class DataReader {
 		try {
 			number = sc.nextInt();
 		} catch (InputMismatchException e) {
-			throw new NumberFormatException("To nie jest liczba");
+			throw new NumberFormatException("It isn't a number");
 		} finally {
 			sc.nextLine();
 		}

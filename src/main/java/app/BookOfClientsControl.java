@@ -15,7 +15,7 @@ public class BookOfClientsControl {
 	public BookOfClientsControl() {
 		dataReader = new DataReader();
 		bookOfClients = new BookOfClients();
-		
+
 	}
 
 	public void controlLoop() {
@@ -45,14 +45,14 @@ public class BookOfClientsControl {
 
 	private void printOptions() {
 		System.out.println("Choose option: ");
-		for (Option o: Option.values()) {
+		for (Option o : Option.values()) {
 			System.out.println(o);
 		}
 	}
 
 	public void addClient() {
 		Client client = dataReader.readAndCreateClient();
-		bookOfClients.addClient(client);		
+		bookOfClients.addClient(client);
 	}
 
 	public void printClients() {
