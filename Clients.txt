@@ -1,0 +1,11 @@
+Name of Client: asdasd
+Surname of Client: asdas
+Description: adsasda
+Date of Session: asdasdasd
+Type of Session: asdasdasd
+Price of Session: 12313Name of Client: asds
+Surname of Client: asdasd
+Description: asdasd
+Date of Session: asdsadasdasd
+Type of Session: ads
+Price of Session: 12313

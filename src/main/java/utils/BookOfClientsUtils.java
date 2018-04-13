@@ -14,7 +14,7 @@ public class BookOfClientsUtils {
 			countClients++;
 		}
 		if (countClients == 0) {
-			System.out.println("Brak Klientów w książce");
+			System.out.println("Empty book of clients");
 		}
 	}
 }

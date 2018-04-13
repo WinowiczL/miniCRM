@@ -113,7 +113,7 @@ public class Client {
 
 	@Override
 	public String toString() {
-		return ("Imię klienta: " + firstName + "\nNazwisko klienta: " + lastName + "\nOpis: " + description 
-				+ "\nData sesji: " + dateOfSession + "\nTyp sesji: " + typeOfSession + "\nCena sesji: " + priceOfSession);
+		return ("Name of Client: " + firstName + "\nSurname of Client: " + lastName + "\nDescription: " + description
+				+ "\nDate of Session: " + dateOfSession + "\nType of Session: " + typeOfSession + "\nPrice of Session: " + priceOfSession);
 	}	
 }

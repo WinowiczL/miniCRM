@@ -3,7 +3,7 @@ package app;
 import java.util.NoSuchElementException;
 
 public enum Option {
-	EXIT(0, "EXIT"), ADD_CLIENT(1, "Add Client"), PRINT_CLIENTS(2, "Show all Clients");
+	EXIT(0, "EXIT"), ADD_CLIENT(1, "Add Client"), PRINT_CLIENTS(2, "Show Clients from this session"), SAVE_TO_FILE(3, "Save to file"), PRINT_ALL_CLIENTS(4, "Show all your Clients");
 
 	private int value;
 	private String description;
@@ -31,7 +31,7 @@ public enum Option {
 		try {
 			result = Option.values()[option];
 		} catch (ArrayIndexOutOfBoundsException e) {
-			throw new NoSuchElementException("Brak elementu o wskazanym ID");
+			throw new NoSuchElementException("Wrong option");
 		}
 		return result;
 	}
